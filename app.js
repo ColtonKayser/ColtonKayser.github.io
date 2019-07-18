@@ -19,55 +19,20 @@ $(() => {
     }
     // console.log($lastName);
 
-
-    // const $jokeRandomizer = Math.floor(Math.random() * 550);
-    // console.log($jokeRandomizer);
-
-
+    console.log('before ajax');
   $.ajax({
       url:'https://api.icndb.com/jokes/random?firstName=' +$firstName+ '&lastName=' +$lastName+ '&exclude=[explicit]'
    }).then(
        (data)=>{
+         console.log('after ajax');
          ///get joke
            let $joke = data.value.joke;
-           ////create div to store joke
-           // let $jokeContainer = $('<div>').addClass('joke-container');
-           ///add joke div to DOM
-           $('#whole-container').text($joke);
-           ///add joke to joke div
-           // $($jokeContainer).append($joke);
-
-           // const $moreJokesbutton = $('<button>').text('Another Joke').addClass('norrized-button');
-           // $('body').append($moreJokesbutton);
-
-            // $moreJokesbutton.on('click', () => {
-            //   // const $jokeRandomizer = Math.floor(Math.random() * 550);
-            //   $($jokeContainer).append($joke);
-            // })
-
-
-
-
-
-
-
+           //////changes text in joke container
+           $('#joke-container').text($joke);
        },
        ()=>{
            console.log('bad request');
-       }
+      }
    );
-
-
-
-
-
-
-
-
-
-
-
-   })
-
-
+  })
 });

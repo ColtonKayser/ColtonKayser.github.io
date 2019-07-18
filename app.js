@@ -28,7 +28,14 @@ $(() => {
        url:'https://api.icndb.com/jokes/random?firstName=' +$firstName+ '&lastName=' +$lastName+ '&exclude=[explicit]'
    }).then(
        (data)=>{
-           console.log(data.value.joke);
+         ///get joke
+           let $joke = data.value.joke;
+           ////create div to store joke
+           let $jokeContainer = $('<div>');
+           ///add joke div to DOM
+           $('body').append($jokeContainer);
+           ///add joke to joke div
+           $($jokeContainer).append($joke);
        },
        ()=>{
            console.log('bad request');

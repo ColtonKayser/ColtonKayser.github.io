@@ -31,11 +31,11 @@ $(() => {
          ///get joke
            let $joke = data.value.joke;
            ////create div to store joke
-           let $jokeContainer = $('<div>').addClass('joke-container');
+           // let $jokeContainer = $('<div>').addClass('joke-container');
            ///add joke div to DOM
-           $('#whole-container').append($jokeContainer);
+           $('#whole-container').text($joke);
            ///add joke to joke div
-           $($jokeContainer).append($joke);
+           // $($jokeContainer).append($joke);
 
            // const $moreJokesbutton = $('<button>').text('Another Joke').addClass('norrized-button');
            // $('body').append($moreJokesbutton);

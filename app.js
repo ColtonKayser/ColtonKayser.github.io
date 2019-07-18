@@ -9,7 +9,7 @@ $(() => {
     if ($firstName == ''){
       $firstName = 'Chuck';
     }
-    console.log($firstName);
+    // console.log($firstName);
 
     ////get user input for last name
     let $lastName = $('#last-name').val();
@@ -17,23 +17,18 @@ $(() => {
     if ($lastName == ''){
       $lastName = 'Norris';
     }
-    console.log($lastName);
+    // console.log($lastName);
 
-
-
-
-
-  })
 
 
 
 
 
   $.ajax({
-       url:'https://api.icndb.com/jokes/random?firstName=Colton&lastName=Kayser&exclude=[explicit]'
+       url:'https://api.icndb.com/jokes/random?firstName=' +$firstName+ '&lastName=' +$lastName+ '&exclude=[explicit]'
    }).then(
        (data)=>{
-           // console.log(data.value.joke);
+           console.log(data.value.joke);
        },
        ()=>{
            console.log('bad request');
@@ -50,7 +45,7 @@ $(() => {
 
 
 
-
+   })
 
 
 });

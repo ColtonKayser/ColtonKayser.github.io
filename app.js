@@ -1,6 +1,26 @@
 $(() => {
 
 
+//////////MODAL
+
+  ////gets FAQ button
+  const $openFAQ = $('#openFAQ');
+
+  /////grabs the modal itself
+  const $modal = $('#modal');
+
+  ////grabs close button
+  const $closeFAQ = $('#closeFAQ');
+
+  ////hide modal
+  $modal.hide();
+
+  const openModal = () => {
+    $modal.show();
+  }
+
+  $openFAQ.on('click', openModal);
+
 ///////////////////Carousel
 ////////   NOTE: I referenced Jerrica's carousel code along to get my carousel up and running. There are some similarities, but I chose to display/hide the images on load using jquery instead of css.
 
@@ -61,21 +81,6 @@ $(() => {
     ////show current image on DOM
     $currentImg.show();
   })
-
-//////////MODAL
-
-  ////gets FAQ button
-  const $openModal =$('#openModal');
-
-  /////grabs the modal itself
-
-
-
-
-
-
-
-
 
 /////////USER INPUT
 //////get user input on button click

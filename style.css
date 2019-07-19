@@ -6,7 +6,7 @@
 
 #joke-container {
   margin: 20px auto 0 auto;
-
+  height: 100px;
   width: 90%;
   text-align: center;
 }
@@ -14,7 +14,7 @@
 /* User input styling */
 .user-input-and-buttons {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 .norrized-button {
   color: white;
@@ -27,44 +27,47 @@
 
 /* Carousel Styling */
 .carousel-container {
-  width: 70%;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  margin: 10% auto 0 auto;
+  /* justify-content: space-around; */
+  align-items: center;
+  margin-top: 75px;
+
 }
 
 
 
 img {
-  width: 70%;
-  height: 70%;
+  width: 250px;
+  /* margin: 0 auto; */
+  /* margin-left: 40px; */
+  /* height: 200px; */
   /* object-fit: contain; */
+
 }
 
 
  .carousel-images {
   margin-top: 1%;
-  width: 100%;
+  /* width: 50%; */
+  /* text-align: center; */
+  /* height: 50%; */
   margin: 0 auto;
-  text-align: center;
-  height: 50%;
-  /* object-fit:contain; */
-  /* display: none; */
-
 }
 
-  .carousel-images img:first-of-type{
-
-  }
 
 .buttons {
-  margin-top: 20%;
+  /* width: 30%;
+  height: 30%; */
+  text-align: center;
 }
 
 .next-button {
-
+  margin-left: 20px;
+  width: 60px;
 }
 
 .previous-button {
-
+  width: 60px;
+  margin-right: 20px;
 }

@@ -1,5 +1,9 @@
 $(() => {
 
+
+///////////////////Carousel
+////////   NOTE: I referenced Jerrica's carousel code along to get my carousel up and running. There are some similarities, but I chose to display/hide the images on load using jquery instead of css.
+
   //Establish current image index
   let $currentImgIndex = 0;
   // grab current image element

@@ -62,9 +62,22 @@ $(() => {
     $currentImg.show();
   })
 
+//////////MODAL
+
+  ////gets FAQ button
+  const $openModal =$('#openModal');
+
+  /////grabs the modal itself
 
 
 
+
+
+
+
+
+
+/////////USER INPUT
 //////get user input on button click
   $('.norrized-button').on('click', (event) => {
     /////prevent refresh
@@ -95,7 +108,7 @@ $(() => {
          console.log(data.value);
            let $joke = data.value.joke;
            //////changes text in joke container
-           $('#joke-container').text($joke);
+           $('#joke-container').html($joke);
        },
        ()=>{
            console.log('bad request');

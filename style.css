@@ -1,4 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Caveat+Brush|Ultra&display=swap');
+
+
+
 /* General */
+
+body {
+  background-color: skyblue;
+  font-family: 'Ultra';
+  font-size: 12.5px;
+}
 
 .container {
   text-align: center;
@@ -9,6 +19,8 @@
   height: 100px;
   width: 90%;
   text-align: center;
+  font-family: 'Caveat Brush';
+  font-size: 20px;
 }
 
 /* User input styling */
@@ -16,13 +28,23 @@
   display: flex;
   justify-content: center;
 }
+#first-name {
+  border-radius: 5px;
+}
+
+#last-name {
+  border-radius: 5px;
+}
+
 .norrized-button {
   color: white;
   background-color: red;
+  border-radius: 2px;
 }
 
 .another-joke {
   background-color: navy;
+  border-radius: 2px;
 }
 
 /* Carousel Styling */
@@ -70,4 +92,12 @@ img {
 .previous-button {
   width: 60px;
   margin-right: 20px;
+}
+
+@media (min-width: 600px) {
+
+
+
+
+
 }

@@ -10,7 +10,7 @@ $(() => {
   $('.carousel-images').children().eq(0).show();
   /////grab total number of images
   let $numberOfImages = $('.carousel-images').children().length - 1;
-  console.log($numberOfImages);
+  // console.log($numberOfImages);
 
   ////grab next button
   const $next = $('.next-button');
@@ -26,7 +26,7 @@ $(() => {
       $currentImgIndex++;
       ///if not
     } else {
-      ///reset current image index
+      ///reset current image index to 0
       $currentImgIndex = 0;
     }
     /////get new current image
@@ -36,6 +36,27 @@ $(() => {
   });
 
 
+  /////grab previous button
+  const $previous = $('.previous-button');
+
+  /////event handler for previous buttons
+  ////previous button on click
+  $previous.on('click', () => {
+    ///hide current image
+    $currentImg.hide();
+    /////if image index is greater than 0
+    if ($currentImgIndex > 0) {
+      ///decrement image index
+      $currentImgIndex--;
+    } else {
+      ///reset current image index to highest amount
+      $currentImgIndex = $numberOfImages;
+    }
+    ///get new current image
+    $currentImg = $('.carousel-images').children().eq($currentImgIndex);
+    ////show current image on DOM
+    $currentImg.show();
+  })
 
 
 

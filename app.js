@@ -1,6 +1,6 @@
 $(() => {
 
-  //Keep track of current image index
+  //Establish current image index
   let $currentImgIndex = 0;
   // grab current image element
   let $currentImg= $('.carousel-images').children().eq($currentImgIndex);
@@ -8,22 +8,30 @@ $(() => {
   $('.carousel-images').children().hide();
   ////show first image on init
   $('.carousel-images').children().eq(0).show();
-  /////total number of images
+  /////grab total number of images
   let $numberOfImages = $('.carousel-images').children().length - 1;
   console.log($numberOfImages);
 
-
+  ////grab next button
   const $next = $('.next-button');
 
+  ///event handler for next button
+  ///next button on click
   $next.on('click', () => {
+    ////hides current image
     $currentImg.hide();
-
+    ////if the image index is less than total number of images
     if($currentImgIndex < $numberOfImages) {
+      ///increment it
       $currentImgIndex++;
+      ///if not
     } else {
+      ///reset current image index
       $currentImgIndex = 0;
     }
+    /////get new current image
     $currentImg = $('.carousel-images').children().eq($currentImgIndex);
+    ////show new image on DOM
     $currentImg.show();
   });
 

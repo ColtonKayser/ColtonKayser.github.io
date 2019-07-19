@@ -25,6 +25,8 @@
     text-align: center;
     font-family: 'Caveat Brush';
     font-size: 40px;
+    background-color: rgb(255, 255, 255, .2)
+    
   }
 
   /* User input styling */
@@ -34,7 +36,7 @@
   }
   #first-name {
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
     width:30%;
     font-style: 'Ultra';
@@ -42,7 +44,7 @@
 
   #last-name {
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
     width:30%;
     font-style: 'Ultra';
@@ -78,7 +80,7 @@
 
 
   img {
-    width: 80%;
+    width: 90%;
     /* margin: 0 auto; */
     /* margin-left: 40px; */
     /* height: 200px; */
@@ -97,25 +99,25 @@
 
 
   .buttons {
-    /* width: 30%;
-    height: 30%; */
+    /* width: 30%; */
+    /* height: 30%;  */
     text-align: center;
-    border-radius: 50%;
-    font-size: 30px;
+    border-radius: 2px;
+    font-size: 12.5px;
   }
 
   .next-button {
-    margin-left: 10px;
+    /* margin-left: 10px;
     /* width: 60px; */
-    margin-right: 10px;
-    padding: 10px;
+    /* margin-right: 10px; */
+    /* padding: 10px; */
   }
 
   .previous-button {
     /* width: 60px; */
     /* margin-right: 15px;
     margin-left: 5px; */
-    padding: 10px;
+    /* padding: 10px; */
   }
 
 

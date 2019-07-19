@@ -2,101 +2,104 @@
 
 
 
-/* General */
 
-body {
-  background-color: skyblue;
-  font-family: 'Ultra';
-  font-size: 12.5px;
-}
+@media (min-width: 400px) {
 
-.container {
-  text-align: center;
-}
+  /* General */
 
-#joke-container {
-  margin: 20px auto 0 auto;
-  height: 100px;
-  width: 90%;
-  text-align: center;
-  font-family: 'Caveat Brush';
-  font-size: 20px;
-}
+  body {
+    background-color: skyblue;
+    font-family: 'Ultra';
+    font-size: 12.5px;
+  }
 
-/* User input styling */
-.user-input-and-buttons {
-  display: flex;
-  justify-content: center;
-}
-#first-name {
-  border-radius: 5px;
-}
+  .container {
+    text-align: center;
+  }
 
-#last-name {
-  border-radius: 5px;
-}
+  #joke-container {
+    margin: 20px auto 0 auto;
+    height: 100px;
+    width: 90%;
+    text-align: center;
+    font-family: 'Caveat Brush';
+    font-size: 20px;
+  }
 
-.norrized-button {
-  color: white;
-  background-color: red;
-  border-radius: 2px;
-}
+  /* User input styling */
+  .user-input-and-buttons {
+    display: flex;
+    justify-content: center;
+  }
+  #first-name {
+    border-radius: 5px;
+  }
 
-.another-joke {
-  background-color: navy;
-  border-radius: 2px;
-}
+  #last-name {
+    border-radius: 5px;
+  }
 
-/* Carousel Styling */
-.carousel-container {
-  width: 100%;
-  display: flex;
-  /* justify-content: space-around; */
-  align-items: center;
-  margin-top: 75px;
+  .norrized-button {
+    color: white;
+    background-color: red;
+    border-radius: 2px;
+  }
 
-}
+  .another-joke {
+    background-color: navy;
+    border-radius: 2px;
+  }
 
+  /* Carousel Styling */
+  .carousel-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
 
-
-img {
-  width: 250px;
-  /* margin: 0 auto; */
-  /* margin-left: 40px; */
-  /* height: 200px; */
-  /* object-fit: contain; */
-
-}
+  }
 
 
- .carousel-images {
-  margin-top: 1%;
-  /* width: 50%; */
-  /* text-align: center; */
-  /* height: 50%; */
-  margin: 0 auto;
-}
+
+  img {
+    width: 250px;
+    /* margin: 0 auto; */
+    /* margin-left: 40px; */
+    /* height: 200px; */
+    /* object-fit: contain; */
+
+  }
 
 
-.buttons {
-  /* width: 30%;
-  height: 30%; */
-  text-align: center;
-}
-
-.next-button {
-  margin-left: 20px;
-  width: 60px;
-}
-
-.previous-button {
-  width: 60px;
-  margin-right: 20px;
-}
-
-@media (min-width: 600px) {
+   .carousel-images {
+    margin-top: 1%;
+    /* width: 50%; */
+    /* text-align: center; */
+    /* height: 50%; */
+    margin: 0 auto;
+  }
 
 
+  .buttons {
+    /* width: 30%;
+    height: 30%; */
+    text-align: center;
+  }
+
+  .next-button {
+    margin-left: 10px;
+    /* width: 60px; */
+    margin-right: 10px;
+    padding: 10px;
+  }
+
+  .previous-button {
+    /* width: 60px; */
+    /* margin-right: 15px;
+    margin-left: 5px; */
+    padding: 10px;
+  }
 
 
 

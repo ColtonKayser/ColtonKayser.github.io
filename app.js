@@ -92,6 +92,7 @@ $(() => {
        (data)=>{
          console.log('after ajax');
          ///get joke
+         console.log(data.value);
            let $joke = data.value.joke;
            //////changes text in joke container
            $('#joke-container').text($joke);

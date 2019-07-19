@@ -87,7 +87,7 @@ $(() => {
 
     console.log('before ajax');
   $.ajax({
-      url:'https://api.icndb.com/jokes/random?firstName=' +$firstName+ '&lastName=' +$lastName+ '&exclude=[explicit]'
+      url:'https://api.icndb.com/jokes/random?firstName=' +$firstName+ '&lastName=' +$lastName+'&exclude=[explicit]'
    }).then(
        (data)=>{
          console.log('after ajax');

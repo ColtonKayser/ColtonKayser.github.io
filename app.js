@@ -55,8 +55,6 @@ $(() => {
   ///event handler for next button
   ///next button on click
   $next.on('click', () => {
-    ////stop auto run
-    clearInterval($autoRun);
     ////hides current image
     $currentImg.hide();
     ////if the image index is less than total number of images
@@ -82,7 +80,6 @@ $(() => {
   ////previous button on click
   $previous.on('click', () => {
     ////stop auto run
-    clearInterval($autoRun);
     ///hide current image
     $currentImg.hide();
     /////if image index is greater than 0

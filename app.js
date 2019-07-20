@@ -28,7 +28,7 @@ $(() => {
     $modal.hide();
   }
 
-  ////close modal event listener
+////close modal event listener
   $closeFAQ.on('click', closeModal);
 
 
@@ -55,6 +55,8 @@ $(() => {
   ///event handler for next button
   ///next button on click
   $next.on('click', () => {
+    ////stop auto run
+    clearInterval($autoRun);
     ////hides current image
     $currentImg.hide();
     ////if the image index is less than total number of images
@@ -79,6 +81,8 @@ $(() => {
   /////event handler for previous buttons
   ////previous button on click
   $previous.on('click', () => {
+    ////stop auto run
+    clearInterval($autoRun);
     ///hide current image
     $currentImg.hide();
     /////if image index is greater than 0
@@ -94,6 +98,12 @@ $(() => {
     ////show current image on DOM
     $currentImg.show();
   })
+
+/////////Have Carousel Auto Run
+  const $autoRun = setInterval(function(){
+    $($next).click()
+  },3000);
+
 
 /////////USER INPUT
 //////get user input on button click
@@ -119,6 +129,8 @@ $(() => {
     console.log('before ajax');
   $.ajax({
       url:'https://api.icndb.com/jokes/random?firstName=' +$firstName+ '&lastName=' +$lastName+'&exclude=[explicit]'
+
+
    }).then(
        (data)=>{
          console.log('after ajax');
@@ -133,4 +145,6 @@ $(() => {
       }
    );
   })
+
+  autoRun();
 });

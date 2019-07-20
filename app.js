@@ -15,11 +15,24 @@ $(() => {
   ////hide modal
   $modal.hide();
 
+  /////function to open modal
   const openModal = () => {
     $modal.show();
   }
 
+  ////open Modal Event listner
   $openFAQ.on('click', openModal);
+
+  ////function to close modal
+  const closeModal = () => {
+    $modal.hide();
+  }
+
+  ////close modal event listener
+  $closeFAQ.on('click', closeModal);
+
+
+
 
 ///////////////////Carousel
 ////////   NOTE: I referenced Jerrica's carousel code along to get my carousel up and running. There are some similarities, but I chose to display/hide the images on load using jquery instead of css.

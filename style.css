@@ -31,13 +31,28 @@
     background-color: white;
     border-radius: 2px;
     width: 80%;
-    margin: 50px auto;
+    margin: 25px auto;
     box-shadow: 0 2px 2px rgba(0,0,0,.2);
+    background-color: rgb(176,224,250);
+    text-align: left;
+  }
+
+  #modal-textbox h1 {
+    text-align: center;
+
   }
 
   #modal-textbox p {
-    padding: 5px;
+    padding: 0 15px;
+    margin-top: 0;
   }
+
+  #modal-textbox h3 {
+    margin-bottom: 7.5px;
+    font-size: 3s5px;
+    text-align: center;
+  }
+
 
   .container {
     text-align: center;

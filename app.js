@@ -1,6 +1,26 @@
 $(() => {
 
 
+  const chuckFacts = ['Chuck Norris’s full name is Carlos Ray Norris.', 'Chuck served in the US Air Force from 1958-1962.', 'Chuck Norris Superkicks is a video game that was released for the Atari 2600 in 1983.', 'Chuck Norris has his own style of competitive fighting known as Chun Kuk Do.', 'Chuck Norris was Bruce Lee’s Nemesis in the 1972 movie, Way of the Dragon.', 'Norris began his martial arts training in South Korea in 1958.', 'Norris won karate’s triple crown for most tournament wins of the year in 1968.', 'Chuck Norris is a fan of Chuck Norris jokes.'];
+
+  setInterval(function(){
+    factChange();
+   },3000);
+  let indexNum = 0;
+
+  $('#chuck-facts').text(chuckFacts[indexNum]);
+
+
+  const factChange = () => {
+    indexNum++;
+    if (indexNum > (chuckFacts.length - 1)) {
+      indexNum = 0;
+    }
+    $('#chuck-facts').text(chuckFacts[indexNum])
+  }
+
+
+
 //////////MODAL
 
   ////gets FAQ button
@@ -97,9 +117,9 @@ $(() => {
   })
 
 /////////Have Carousel Auto Run
-  const $autoRun = setInterval(function(){
-    $($next).click()
-  },3000);
+  // const $autoRun = setInterval(function(){
+  //   $($next).click()
+  // },3000);
 
 
 /////////USER INPUT
@@ -143,5 +163,5 @@ $(() => {
    );
   })
 
-  $autoRun();
+  // $autoRun();
 });

@@ -3,7 +3,7 @@
 
 
 
-@media (min-width: 400px) {
+@media (max-width: 1000px) {
 
   /* General */
 
@@ -221,7 +221,139 @@
   font-size: 20px;
 }
 
-@media (min-width: 600px;) {
+ @media (min-width: 1001px) {
+
+/* General */
+   body {
+     background-color: skyblue;
+     font-family: 'Ultra';
+     font-size: 20px;
+   }
+
+
+/* Modal  */
+   #modal {
+     background-color: rgba(0,0,0,0.4);
+     position: fixed;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 100%;
+     z-index: 1;
+     overflow: auto;
+     font-size: 25px;
+     /* display: none; */
+     font-family: 'Caveat Brush'
+   }
+
+   #modal-textbox {
+     background-color: white;
+     border-radius: 15px;
+     width: 80%;
+     margin: 25px auto;
+     box-shadow: 0 2px 2px rgba(0,0,0,.2);
+     background-color: rgb(176,224,250);
+     text-align: left;
+   }
+
+   #modal-textbox h1 {
+     text-align: center;
+     margin-bottom: 10px;
+   }
+
+   #modal-textbox p {
+     padding: 0 15px;
+     margin-top: 0;
+   }
+
+   #modal-textbox h3 {
+     margin-bottom: 7.5px;
+     font-size: 35px;
+     text-align: center;
+     margin-top: 0;
+   }
+
+   #modal-footer {
+     text-align: center;
+   }
+
+   .modal-buttons {
+ 	padding: 14px 18px;
+ 	background-color: navy;
+ 	border: 1px solid white;
+ 	outline: none;
+ 	border-radius: 3px;
+ 	color: white;
+ 	font-family: 'Caveat Brush';
+ 	cursor: pointer;
+ }
+
+
+ #closeFAQ {
+   margin-bottom: 15px;
+   font-size: 20px;
+ }
+
+/* Joke Container */
+
+.container {
+  text-align: center;
+  position: relative;
+}
+
+
+#joke-container {
+  margin: 20px auto 0 auto;
+  /* height: 100px; */
+  width: 90%;
+  text-align: center;
+  font-family: 'Caveat Brush';
+  font-size: 40px;
+  /* background-color: rgb(255, 255, 255, .2) */
+
+}
+
+/* User Input */
+
+.user-input-and-buttons {
+  display: flex;
+  justify-content: center;
+}
+#first-name {
+  border-radius: 5px;
+  font-size: 15px;
+  text-align: center;
+  width:154px;
+  font-style: 'Ultra';
+}
+
+#last-name {
+  border-radius: 5px;
+  font-size: 15px;
+  text-align: center;
+  width:154px;
+  font-style: 'Ultra';
+}
+
+.norrized-button {
+  color: white;
+  background-color: red;
+  border-radius: 3px;
+  font-size: 20px;
+  width:154px;
+  cursor: pointer;
+  font-family: 'Caveat Brush';
+}
+
+.another-joke {
+  background-color: navy;
+  border-radius: 3px;
+  width: 154px;
+  cursor: pointer;
+  font-family: 'Caveat Brush';
+}
+
+
 
   #chuck-facts-container {
     display: flex;
@@ -229,7 +361,9 @@
     /* width: 100%; */
   }
 
-  #chuck-facts {
+
+
+   #chuck-facts {
     margin-left: 10%;
     margin: 5% auto;
     /* margin-right: 7.5%; */
@@ -252,6 +386,6 @@
    /* text-align: center; */
    /* height: 50%; */
 
- }
+  }
 
 }

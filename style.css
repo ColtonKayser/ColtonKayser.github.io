@@ -141,8 +141,8 @@
     align-items: center;
     margin:0 auto;
     /* margin-top: 220px; */
-
-
+    /* background-color: rgb(176,224,250); */
+    /* border-radius: 3px; */
 
   }
 
@@ -175,6 +175,8 @@
     border-radius: 3px;
     font-size: 12.5px;
     cursor: pointer;
+    font-family: 'Caveat Brush';
+    color: white;
   }
 
   .next-button {
@@ -182,6 +184,8 @@
     /* width: 60px; */
     /* margin-right: 10px; */
     /* padding: 10px; */
+    background-color: navy;
+
   }
 
   .previous-button {
@@ -189,6 +193,7 @@
     /* margin-right: 15px;
     margin-left: 5px; */
     /* padding: 10px; */
+    background-color: red;
   }
 
 

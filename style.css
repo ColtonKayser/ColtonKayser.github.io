@@ -185,7 +185,7 @@
     /* margin-right: 10px; */
     /* padding: 10px; */
     background-color: navy;
-
+    /* width: 30%; */
   }
 
   .previous-button {
@@ -371,7 +371,7 @@
 
 
 img {
-  width: 70%;
+  width: 90%;
   border-radius: 15px;
   /* margin: 0 auto; */
   /* margin-left: 40px; */
@@ -383,7 +383,7 @@ img {
 
  .carousel-images {
   margin-top: 1%;
-  /* width: 30%; */
+  /* width: 60%; */
   /* text-align: center; */
   /* height: 50%; */
 
@@ -406,18 +406,26 @@ img {
   /* margin-left: 10px;
   /* width: 60px; */
   /* margin-right: 10px; */
-  padding: 10px;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
   background-color: navy;
-
+  /* margin-right: 5%; */
 }
 
 .previous-button {
+  /* margin-left: 5%; */
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+  word-wrap: break-word;
   /* width: 60px; */
   /* margin-right: 15px;
-  margin-left: 5px; */
 
-  background-color: red;
-  padding: 10px;
+
+
+  /* padding: 10px; */
 }
 
 
@@ -425,6 +433,9 @@ img {
   display: flex;
   justify-content: space-around;
   height: 50px;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 #chuck-facts-container h1 {
@@ -439,12 +450,17 @@ img {
 
 
 #openFAQ {
-  margin-top: 150px;
+  margin-top: 7.5%;
   font-size: 20px;
 }
 
 
+ /* @media (min-width: 600px) {
 
+   #openFAQ {
+   margin-top: 5%;
+ }
+ } */
 
 
 

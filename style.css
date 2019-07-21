@@ -353,8 +353,110 @@
   font-family: 'Caveat Brush';
 }
 
+/* Carosuel Styling */
+
+.carousel-container {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:0 auto;
+  /* margin-top: 220px; */
+  /* background-color: rgb(176,224,250); */
+  /* border-radius: 3px; */
+
+}
 
 
+
+img {
+  width: 70%;
+  border-radius: 15px;
+  /* margin: 0 auto; */
+  /* margin-left: 40px; */
+  /* height: 200px; */
+  /* object-fit: contain; */
+
+}
+
+
+ .carousel-images {
+  margin-top: 1%;
+  /* width: 30%; */
+  /* text-align: center; */
+  /* height: 50%; */
+
+}
+
+
+.buttons {
+  /* width: 30%; */
+  /* height: 30%;  */
+  text-align: center;
+  border-radius: 3px;
+  font-size: 12.5px;
+  cursor: pointer;
+  font-family: 'Caveat Brush';
+  color: white;
+
+}
+
+.next-button {
+  /* margin-left: 10px;
+  /* width: 60px; */
+  /* margin-right: 10px; */
+  padding: 10px;
+  background-color: navy;
+
+}
+
+.previous-button {
+  /* width: 60px; */
+  /* margin-right: 15px;
+  margin-left: 5px; */
+
+  background-color: red;
+  padding: 10px;
+}
+
+
+#chuck-facts-container {
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+}
+
+#chuck-facts-container h1 {
+  font-size: 35px;
+}
+
+#chuck-facts {
+  width: 70%;
+  padding-right: 5%;
+  margin: 5% auto;
+}
+
+
+#openFAQ {
+  margin-top: 150px;
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
+
+/*
   #chuck-facts-container {
     display: flex;
     justify-content: center;
@@ -363,28 +465,22 @@
 
 
 
-   #chuck-facts {
+   /*#chuck-facts {
     margin-left: 10%;
     margin: 5% auto;
     /* margin-right: 7.5%; */
 
   }
 
-  #chuck-facts-container h1 {
+  /*#chuck-facts-container h1 {
     font-size: 35px;
     width: 30%;
     margin-right: -20px;
-  }
+  } */
 
-  img {
-    width: 30%;
-  }
 
-  .carousel-images {
-   margin-top: 1%;
-   width: 500px;
-   /* text-align: center; */
-   /* height: 50%; */
+
+
 
   }
 

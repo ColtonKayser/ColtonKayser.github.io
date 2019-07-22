@@ -35,7 +35,7 @@ The app uses an ajax callback to access the API, and I have manipulated the call
 
 Input fields are used on the html where the user can type in their first and last names, and buttons are used to start on.('click) functions. Once the "GET NORRIZED" or "GET ANOTHER JOKE" button is clicked, the inputted names will be stored in the variables $firstName and $lastName. Those variables manipulate the callback url, and the name the user has inputted are inserted into the jokes, which are then inserted into a joke container div on the DOM. If no input is entered, and the "GET NORRIZED" or "GET ANOTHER JOKE" button is clicked, the default name in each joke will be "Chuck Norris." 
 
-## Carousel
+## Carousels
 
 There are two carousels on the app. One allows the user to manipulate which picture of Chuck is showing on the DOM, and the other automatically cycles through an array of Chuck Norris facts.
 
@@ -138,3 +138,37 @@ During the creation process for the Image Carousel, I thought about using a set 
   }
 ```
 I think the fact carousel compliments the image carousel nicely, and also allows for a nicer UI.
+
+## FAQ Modal
+
+I thought it would be nice to put in a FAQ section to not only instruct the user how to use the app properly, but also instill some more humor into the app. The answers are written from a humorous perspective. The FAQ button uses an on.('click) function to switch between .hide() and .show() functions for the modal holding the FAQ text. The visual example with comments is below:
+
+```javascript
+////gets FAQ button
+  const $openFAQ = $('#openFAQ');
+
+  /////grabs the modal itself
+  const $modal = $('#modal');
+
+  ////grabs close button
+  const $closeFAQ = $('#closeFAQ');
+
+  ////hide modal
+  $modal.hide();
+
+  /////function to open modal
+  const openModal = () => {
+    $modal.show();
+  }
+
+  ////open Modal Event listner
+  $openFAQ.on('click', openModal);
+
+  ////function to close modal
+  const closeModal = () => {
+    $modal.hide();
+  }
+
+////close modal event listener
+  $closeFAQ.on('click', closeModal);
+```

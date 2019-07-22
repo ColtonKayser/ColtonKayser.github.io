@@ -175,7 +175,7 @@ I thought it would be nice to put in a FAQ section to not only instruct the user
 # Issues and Limitations
 
 ## API Scope
-Due to the simple scope of the API, there is not much more information to pull other than joke id and the jokes themselves. Although some of the jokes have been placed in categories, most do not have a category, and the category process feels incomplete. This leads to sorting issues, especially for filtering explicit jokes. 
+Due to the simple scope of the API, there is not much more information to pull other than joke id and the jokes themselves. Although some of the jokes have been placed in genre categories, most do not have a category, and the category process feels incomplete. This leads to sorting issues, especially for filtering explicit jokes. 
 
 ## Callback Response
 Sometimes the callback response of the API is slow, and can lead to the user waiting for a new joke for upwards of 45 seconds. It happens at random intervals, and is generally fixed within a half hour.

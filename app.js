@@ -5,7 +5,7 @@ $(() => {
 
   setInterval(function(){
     factChange();
-   },3000);
+  },4000);
   let indexNum = 0;
 
   $('#chuck-facts').text(chuckFacts[indexNum]);

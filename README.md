@@ -12,8 +12,9 @@ Joke is the text of the specific joke called.
 
 Genre is only filled out within some of the objects. For most objects, it is an empty string. Genre is used for filtering jokes during your callback. Since my purposes are educational, I have filtered out the genre: explicit jokes. However, some jokes have not been labeled properly, so a few explicit jokes remain. 
 
-## Technology Used
+# Technology Used
 
+## AJAX and Jquery
 The app uses an ajax callback to access the API, and I have manipulated the callback url using jquery to callback a random joke and customize the name in that joke. As stated above, I have filtered out explicit jokes, so I have manipulated the url to do that as well. Here is the visual example:
 
 ```javascript
@@ -32,4 +33,79 @@ The app uses an ajax callback to access the API, and I have manipulated the call
    );
 ```
 
-Input fields are used on the html where the user can type in their first and last names. Once the "GET NORRIZED" or "GET ANOTHER JOKE" button is clicked, the inputted names will be stored in the variables $firstName and $lastName. Those variables manipulate the callback url, and the name the user has inputted are inserted into the jokes. If no input is entered, and the "GET NORRIZED" or "GET ANOTHER JOKE" button is clicked, the default name in each joke will be "Chuck Norris." 
+Input fields are used on the html where the user can type in their first and last names, and buttons are used to start on.('click) functions. Once the "GET NORRIZED" or "GET ANOTHER JOKE" button is clicked, the inputted names will be stored in the variables $firstName and $lastName. Those variables manipulate the callback url, and the name the user has inputted are inserted into the jokes, which are then inserted into a joke container div on the DOM. If no input is entered, and the "GET NORRIZED" or "GET ANOTHER JOKE" button is clicked, the default name in each joke will be "Chuck Norris." 
+
+## Carousel
+
+There are two carousels on the app. One allows the user to manipulate which picture of Chuck is showing on the DOM, and the other automatically cycles through an array of Chuck Norris facts.
+
+## Image Carousel
+
+The image carousel hides and shows three seperate photos of Chuck that are <img> elements hardcoded into the html. Using jquery, both the previous and next buttons are using on.('click') functions to hide the existing image, change the image index number to reflect the next or previous image, and then show the new image that has the corresponding index number on the DOM. A visual example with comments is below:
+
+```javascript
+///////////////////Carousel
+
+  //Establish current image index
+  let $currentImgIndex = 0;
+  // grab current image element
+  let $currentImg= $('.carousel-images').children().eq($currentImgIndex);
+  ////hide all the images on init
+  $('.carousel-images').children().hide();
+  ////show first image on init
+  $('.carousel-images').children().eq(0).show();
+  /////grab total number of images
+  let $numberOfImages = $('.carousel-images').children().length - 1;
+
+  ////grab next button
+  const $next = $('.next-button');
+
+  ///event handler for next button
+  ///next button on click
+  $next.on('click', () => {
+    ////hides current image
+    $currentImg.hide();
+    ////if the image index is less than total number of images
+    if($currentImgIndex < $numberOfImages) {
+      ///increment it
+      $currentImgIndex++;
+      ///if not
+    } else {
+      ///reset current image index to 0
+      $currentImgIndex = 0;
+    }
+    /////get new current image
+    $currentImg = $('.carousel-images').children().eq($currentImgIndex);
+    ////show new image on DOM
+    $currentImg.show();
+  });
+
+
+  /////grab previous button
+  const $previous = $('.previous-button');
+
+  /////event handler for previous buttons
+  ////previous button on click
+  $previous.on('click', () => {
+    ////stop auto run
+    ///hide current image
+    $currentImg.hide();
+    /////if image index is greater than 0
+    if ($currentImgIndex > 0) {
+      ///decrement image index
+      $currentImgIndex--;
+    } else {
+      ///reset current image index to highest amount
+      $currentImgIndex = $numberOfImages;
+    }
+    ///get new current image
+    $currentImg = $('.carousel-images').children().eq($currentImgIndex);
+    ////show current image on DOM
+    $currentImg.show();
+  })
+```
+
+## Chuck Facts Carousel
+
+During the creation process for the Image Carousel, I thought about using a set interval function to change the images every few seconds. Once coded and tested, I found the auto cycling to be a distraction from reading the jokes. I did however, think the feature would be good for something that takes up less space visiually.
+

@@ -41,7 +41,7 @@ There are two carousels on the app. One allows the user to manipulate which pict
 
 ## Image Carousel
 
-The image carousel hides and shows three seperate photos of Chuck that are <img> elements hardcoded into the html. Using jquery, both the previous and next buttons are using on.('click') functions to hide the existing image, change the image index number to reflect the next or previous image, and then show the new image that has the corresponding index number on the DOM. A visual example with comments is below:
+The image carousel hides and shows three seperate photos of Chuck that are <img> elements hardcoded into the html. Using jquery, both the previous and next buttons are using on.('click') event listeners to hide the existing image, change the image index number to reflect the next or previous image, and then show the new image that has the corresponding index number on the DOM. A visual example with comments is below:
 
 ```javascript
 ///////////////////Carousel
@@ -141,7 +141,7 @@ I think the fact carousel compliments the image carousel nicely, and also allows
 
 ## FAQ Modal
 
-I thought it would be nice to put in a FAQ section to not only instruct the user how to use the app properly, but also instill some more humor into the app. The answers are written from a humorous perspective. The FAQ button uses an on.('click) function to switch between .hide() and .show() functions for the modal holding the FAQ text. The visual example with comments is below:
+I thought it would be nice to put in a FAQ section to not only instruct the user how to use the app properly, but also instill some more humor into the app. The answers are written from a humorous perspective. The FAQ button uses an on.('click) event listener to switch between .hide() and .show() functions for the modal holding the FAQ text. The visual example with comments is below:
 
 ```javascript
 ////gets FAQ button

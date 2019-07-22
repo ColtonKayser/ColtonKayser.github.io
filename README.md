@@ -107,5 +107,34 @@ The image carousel hides and shows three seperate photos of Chuck that are <img>
 
 ## Chuck Facts Carousel
 
-During the creation process for the Image Carousel, I thought about using a set interval function to change the images every few seconds. Once coded and tested, I found the auto cycling to be a distraction from reading the jokes. I did however, think the feature would be good for something that takes up less space visiually.
+During the creation process for the Image Carousel, I thought about using a set interval function to change the images every few seconds. Once coded and tested, I found the auto cycling to be a distraction from reading the jokes. I did however, think the feature would be good for something that takes up less space visiually. Text seemed to be the perfect solution for this.  Since this API is very simple and only has a few key pair values in it's objects, I decided to look for outside data. I compiled a number Chuck Norris facts in an array, and used jquery, and the set interval function to switch them out every few seconds. Here is the visual examples with commments below:
 
+```Javascript
+////Array of Chuck Facts
+  const chuckFacts = ['Chuck Norris’s full name is Carlos Ray Norris.', 'Chuck served in the US Air Force from 1958-1962.', 'Chuck Norris Superkicks is a video game that was released for the Atari 2600 in 1983.', 'Chuck Norris has his own style of competitive fighting known as Chun Kuk Do.', 'Chuck Norris was Bruce Lee’s Nemesis in the 1972 movie, Way of the Dragon.', 'Norris began his martial arts training in South Korea in 1958.', 'Norris won karate’s triple crown for most tournament wins of the year in 1968.', 'Chuck Norris is a fan of Chuck Norris jokes.'];
+  
+
+
+/////Function to run the fact change function every four seconds
+  setInterval(function(){
+    factChange();
+  },4000);
+
+////Chuck Fact array index number
+  let indexNum = 0;
+
+//////Make the text of the Chuck Facts container the chuck fact with the corresponding index
+  $('#chuck-facts').text(chuckFacts[indexNum]);
+
+/////function to have facts change
+  const factChange = () => {
+    ////increase index number of chuck facts
+    indexNum++;
+    /////reset to beginning of array if we hit all the facts
+    if (indexNum > (chuckFacts.length - 1)) {
+      indexNum = 0;
+    }
+    $('#chuck-facts').text(chuckFacts[indexNum])
+  }
+```
+I think the fact carousel compliments the image carousel nicely, and also allows for a nicer UI.
